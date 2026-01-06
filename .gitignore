@@ -1,0 +1,51 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.dist/
+build/
+.venv/
+.env
+.DS_Store
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Data (DO NOT PUSH) ---
+datasets/**/original/
+datasets/**/converted/
+datasets/**/nnunet_raw/
+datasets/**/nnunet_preprocessed/
+datasets/**/nnunet_results/
+datasets/**/nnunet_*/*
+datasets/**/results/
+datasets/**/logs/
+datasets/**/nnunet_*/**/plans.json
+datasets/**/nnunet_*/**/dataset_fingerprint.json
+datasets/**/nnunet_results/**/*.png
+
+# If you keep empty dirs via .gitkeep, allow those
+!datasets/**/.gitkeep
+!logs/.gitkeep
+!results/.gitkeep
+
+# --- nnU-Net / training artifacts ---
+*.pth
+*.pt
+*.ckpt
+*.npz
+*.npy
+*.pkl
+training_log_*.txt
+debug.json
+
+
+# --- OS / editors ---
+.vscode/
+.idea/
+
+configs/dataset_boston.yaml
+configs/dataset_amsterdam.yaml

@@ -1,0 +1,20 @@
+# nnU-Net training and inference configuration.
+#
+# Specifies model architecture, training parameters, preprocessing
+# options, and inference behavior used across experiments.
+
+nnunet_version: v2
+
+dataset_id: 1
+trainer: nnUNetTrainer
+configuration: 3d_fullres
+
+num_epochs: 100
+batch_size: auto
+num_workers: 8
+
+use_folds: [0, 1, 2, 3, 4]
+
+inference:
+  save_probabilities: false
+  postprocess: false
